@@ -1,1 +1,58 @@
+<!DOCTYPE html>
 
+<html>
+    <body onload="onLoad()">
+        <div class="progressbar">
+            <div class="progressbar-slider" id="progress-slider"></div>
+            <div class="progressbar-slider-text" id="progress-text">0%</div>
+        </div>
+    </body>
+
+    <style>
+        body{
+            background-color: transparent;
+        }
+
+        .progressbar{
+            background-color: grey;
+            border-radius: 15px;
+
+            width: 100%;
+            height: 30px;
+
+            position: relative;
+        }
+
+        .progressbar-slider{
+            background-color: yellow;
+            border-radius: 14px;
+
+            width: 60%;
+            height: 30px;
+        }
+
+        .progressbar-slider-text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            font-weight: 700;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 22px;
+
+            color: black;
+        }
+    </style>
+
+    <script>
+        function onLoad(){
+            var slider = document.getElementById("progress-slider");
+            var text = document.getElementById("progress-text");
+            var percent = "1%";
+
+            slider.style.width = percent;
+            text.textContent = percent;
+        }
+    </script>
+</html>
